@@ -1,0 +1,45 @@
+@use "../../styles.scss" as base;
+
+$grid-gap: 1.5rem;
+$card-border-radius: 15px;
+$card-margin-decor: 2.5rem;
+$card-padding-inline: 2rem;
+
+.card {
+  border-radius: $card-border-radius;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: base.$dark-blue;
+  border-radius: $card-border-radius;
+  box-shadow: 0 0 30px hsla(0, 0%, 100%, 0.25);
+
+  &:hover:has(a:hover) {
+    box-shadow: 0 0 40px hsla(0, 0%, 100%, 0.6);
+    animation-name: blip;
+    animation-duration: 0.1s;
+  }
+}
+
+.card-container.decorated {
+  background-position: top -0.25rem right 1rem;
+  background-repeat: no-repeat;
+  background-size: 28%;
+  border-radius: $card-border-radius;
+
+  padding-top: $card-margin-decor;
+}
+
+@keyframes blip {
+  0% {
+    box-shadow: 0 0 30px hsla(0, 0%, 100%, 0.25);
+  }
+  25% {
+    box-shadow: 0 0 50px hsla(0, 0%, 100%, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 40px hsla(0, 0%, 100%, 0.6);
+  }
+}

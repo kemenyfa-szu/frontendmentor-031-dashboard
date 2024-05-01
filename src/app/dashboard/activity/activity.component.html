@@ -1,0 +1,24 @@
+<div
+  class="card-container decorated"
+  [ngStyle]="{
+    'background-color': data?.bgcolor,
+    'background-image': 'url(\'../assets/images/' + data?.bgicon + '\')'
+  }"
+>
+  <article class="card card-activity">
+    <a href="#" class="activity-data">
+      <header>
+        <h2>{{ data?.title }}</h2>
+        <button class="options" [ariaLabel]="data?.title + 'options'">
+          <img src="assets/images/icon-ellipsis.svg" alt="" />
+        </button>
+      </header>
+      <div class="data-container">
+        <div class="data">
+          <p class="current">{{ data?.current }}hrs</p>
+          <p class="previous">{{ previous }} - {{ data?.previous }}hrs</p>
+        </div>
+      </div>
+    </a>
+  </article>
+</div>

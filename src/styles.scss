@@ -1,4 +1,4 @@
-$Blue: hsl(246, 80%, 60%);
+$blue: hsl(246, 80%, 60%);
 
 $clr-work: hsl(15, 100%, 70%);
 $clr-play: hsl(195, 74%, 62%);
@@ -27,7 +27,12 @@ $card-title-font-size: 1.125rem;
 
 body {
   background-color: $very-dark-blue;
-  color: white;
+  background: linear-gradient(
+    135deg,
+    rgba(73, 0, 80, 1) 0%,
+    rgba(30, 31, 122, 1) 100%
+  );
+  color: $pale-blue;
   font-family: "Rubik", Arial, Helvetica, sans-serif;
 }
 
@@ -36,9 +41,16 @@ img {
   display: block;
 }
 
+a,
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
 button {
   color: inherit;
   display: block;
   background: none;
   border: none;
+  cursor: pointer;
 }
